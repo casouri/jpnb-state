@@ -1,0 +1,34 @@
+#+TITLE: jpnb-state
+
+This is a simple evil state for EIN(Emacs IPython Notebook).
+
+*Usage:*
+
+Add jpnb-state.el to load-path, and:
+#+BEGIN_SRC lisp
+(require 'jpnb-state)
+(define-key 'some-keymap "somekey" #'evil-jpnb-state)
+#+END_SRC
+
+| key        | command                                  |
+|------------+------------------------------------------|
+| "i"        | evil-normal-state                        |
+| "j"        | ein:worksheet-goto-next-input            |
+| "k"        | ein:worksheet-goto-prev-input            |
+| "J"        | ein:worksheet-move-cell-down             |
+| "K"        | ein:worksheet-move-cell-up               |
+| "<s-up>"   | ein:worksheet-move-cell-up               |
+| "<s-down>" | ein:worksheet-move-cell-down             |
+| "b"        | ein:worksheet-toggle-output              |
+| "t"        | ein:worksheet-toggle-cell-type           |
+| "dd"       | ein:worksheet-kill-cell                  |
+| "o"        | ein:worksheet-insert-cell-below          |
+| "O"        | ein:worksheet-insert-cell-above          |
+| "S-return" | ein:worksheet-execute-cell-and-goto-next |
+| "e"        | ein:worksheet-execute-cell-and-goto-next |
+| "C-l"      | ein:worksheet-clear-output               |
+| "y"        | ein:worksheet-copy-cell                  |
+| "p"        | ein:worksheet-yank-cell                  |
+| "s"        | ein:worksheet-split-cell-at-point        |
+| "m"        | ein:worksheet-merge-cell                 |
+| "zz"       | evil-scroll-line-to-center               |
