@@ -1,12 +1,14 @@
 #+TITLE: jpnb-state
 
-This is a simple evil state for EIN(Emacs IPython Notebook).
+This is a simple evil state that act on cells for EIN(Emacs IPython Notebook).
+Bindings are intuitive.
 
 *Usage:*
 
 Add jpnb-state.el to load-path, and:
 #+BEGIN_SRC lisp
 (require 'jpnb-state)
+;; if you need more binding
 (define-key 'some-keymap "somekey" #'evil-jpnb-state)
 #+END_SRC
 
@@ -32,3 +34,5 @@ Add jpnb-state.el to load-path, and:
 |  s         | ein:worksheet-split-cell-at-point        |
 |  m         | ein:worksheet-merge-cell                 |
 |  zz        | evil-scroll-line-to-center               |
+
+For normal up/down , use <up>/<down> or C-n/C-p.
